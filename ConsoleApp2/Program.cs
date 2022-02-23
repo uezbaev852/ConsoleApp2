@@ -10,13 +10,13 @@ namespace ConsoleApp2
     {
         static void Palindrom (string args)
         {
-            string[] words = args.Split(' ','.',',',':',';','-','!','?');
+            string[] words = args.Split(' ','.',',',':',';','-','!','?');//делю предложение
             int flag = 0;
-            string fullword = string.Concat(words);
-            char[] letters = fullword.ToCharArray();
+            string fullword = string.Concat(words);//переписываю раздельные слова в одно
+            char[] letters = fullword.ToCharArray();//пересобираю слово в массив чаров
             for (int i = 0; i < letters.Length/2; i++)
             {
-                if (letters[i] != letters[letters.Length - i - 1])
+                if (letters[i] != letters[letters.Length - i - 1])//проверяю первый и последний символ
                 {
                     flag = 0;
                 }
